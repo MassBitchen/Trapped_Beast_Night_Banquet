@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://tnjeith824vp"]
+
+[ext_resource type="Script" uid="uid://befkj4vel31xd" path="res://脚本/Teleporter.gd" id="4_2pks0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yerdr"]
+radius = 197.385
+
+[node name="test" type="Node2D"]
+
+[node name="Telepoter" type="Area2D" parent="."]
+script = ExtResource("4_2pks0")
+path = "uid://cwk8risf4rix5"
+metadata/_custom_type_script = "uid://befkj4vel31xd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter"]
+position = Vector2(185, 502)
+shape = SubResource("CircleShape2D_yerdr")

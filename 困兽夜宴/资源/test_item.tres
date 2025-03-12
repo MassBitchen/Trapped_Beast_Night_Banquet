@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dop3uu2ya1hc5"]
+
+[ext_resource type="Script" uid="uid://cen7guv4xyust" path="res://脚本/资源/Prop.gd" id="1_5ncqx"]
+[ext_resource type="Texture2D" uid="uid://cjmb5gmkpf1bd" path="res://icon.svg" id="1_b4j6s"]
+
+[resource]
+script = ExtResource("1_5ncqx")
+item_name = "test_item"
+prop_texture = ExtResource("1_b4j6s")
+scene_texture = ExtResource("1_b4j6s")
+description = "这是一个测试111111111111的东西"
+metadata/_custom_type_script = "uid://cen7guv4xyust"

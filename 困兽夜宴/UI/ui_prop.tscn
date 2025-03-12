@@ -1,0 +1,181 @@
+[gd_scene load_steps=4 format=3 uid="uid://dujflskwddo8w"]
+
+[ext_resource type="Script" uid="uid://cedywqvk502sj" path="res://UI/ui_prop.gd" id="1_timss"]
+[ext_resource type="Script" uid="uid://bw8ie2rjspmvh" path="res://脚本/Item_slot.gd" id="2_sylpi"]
+[ext_resource type="Texture2D" uid="uid://cjmb5gmkpf1bd" path="res://icon.svg" id="3_shwr7"]
+
+[node name="ui_prop" type="Control"]
+custom_minimum_size = Vector2(1980, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1782.0
+offset_right = 1980.0
+offset_bottom = 1080.0
+script = ExtResource("1_timss")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(198, 972)
+layout_mode = 0
+offset_top = 105.0
+offset_right = 198.0
+offset_bottom = 1077.0
+
+[node name="bag_bg" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/bag_bg"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ColorRect5" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="ColorRect6" type="ColorRect" parent="PanelContainer/bag_bg/GridContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="bag" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
+
+[node name="bag" type="GridContainer" parent="PanelContainer/bag"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="ItemSlot" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="ItemSlot2" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="ItemSlot3" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="ItemSlot4" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="ItemSlot5" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="ItemSlot6" type="Button" parent="PanelContainer/bag/bag"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_sylpi")
+metadata/_custom_type_script = "uid://bw8ie2rjspmvh"
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(1782, 1080)
+anchors_preset = 0
+offset_left = 198.0
+offset_right = 1980.0
+offset_bottom = 1080.0
+
+[node name="item_texture" type="TextureRect" parent="Control"]
+custom_minimum_size = Vector2(512, 512)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 134.0
+offset_top = -266.0
+offset_right = 646.0
+offset_bottom = 246.0
+grow_vertical = 2
+texture = ExtResource("3_shwr7")
+expand_mode = 1
+
+[node name="item_description" type="RichTextLabel" parent="Control"]
+custom_minimum_size = Vector2(990, 864)
+layout_mode = 0
+offset_left = 693.0
+offset_top = 123.0
+offset_right = 1683.0
+offset_bottom = 987.0
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "你好"
+
+[node name="page" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = -161.0
+offset_right = 113.0
+offset_bottom = -129.0
+grow_vertical = 0
+text = "○"
+
+[node name="Expand" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "<-"
+
+[node name="Close" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 199.0
+offset_top = -16.0
+offset_right = 235.0
+offset_bottom = 16.0
+grow_vertical = 2
+text = "->"
+
+[connection signal="pressed" from="page" to="." method="_on_page_pressed"]

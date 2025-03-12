@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw2baadhfe8p0"]
+
+[ext_resource type="Script" uid="uid://df5vxmhkrwtdf" path="res://全局系统/ui_main.gd" id="1_jlgsn"]
+[ext_resource type="Shader" uid="uid://bxl52nvdsma8x" path="res://shader/vignette.gdshader" id="2_thald"]
+[ext_resource type="PackedScene" uid="uid://dujflskwddo8w" path="res://UI/ui_prop.tscn" id="3_3qfwt"]
+[ext_resource type="PackedScene" uid="uid://ys15eqbflej1" path="res://UI/options.tscn" id="3_uwqve"]
+[ext_resource type="PackedScene" uid="uid://c7khpkgst0i4r" path="res://UI/memory.tscn" id="5_o7n53"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uwqve"]
+shader = ExtResource("2_thald")
+shader_parameter/vignette_intensity = 1.3
+shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
+shader_parameter/corner_radius = 0.25
+shader_parameter/edge_softness = 0.02
+
+[node name="UI_main" type="CanvasLayer"]
+process_mode = 3
+layer = 9
+script = ExtResource("1_jlgsn")
+
+[node name="vignette" type="ColorRect" parent="."]
+process_mode = 3
+material = SubResource("ShaderMaterial_uwqve")
+custom_minimum_size = Vector2(1782, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ui_prop" parent="." instance=ExtResource("3_3qfwt")]
+offset_right = 3762.0
+
+[node name="ui_setting2" type="HBoxContainer" parent="ui_prop"]
+layout_mode = 0
+offset_left = 18.0
+offset_right = 178.0
+offset_bottom = 73.0
+theme_override_constants/separation = 32
+
+[node name="M" type="Button" parent="ui_prop/ui_setting2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "M"
+
+[node name="O" type="Button" parent="ui_prop/ui_setting2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "O"
+
+[node name="options" parent="." instance=ExtResource("3_uwqve")]
+visible = false
+
+[node name="memory" parent="." instance=ExtResource("5_o7n53")]
+visible = false
+
+[connection signal="pressed" from="ui_prop/ui_setting2/M" to="." method="_on_m_pressed"]
+[connection signal="pressed" from="ui_prop/ui_setting2/O" to="." method="_on_o_pressed"]

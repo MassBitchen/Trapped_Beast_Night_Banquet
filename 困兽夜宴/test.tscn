@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://cwk8risf4rix5"]
+
+[ext_resource type="Script" uid="uid://d3esywjfdc0d5" path="res://脚本/scene_item.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://cjmb5gmkpf1bd" path="res://icon.svg" id="2_6uqi0"]
+[ext_resource type="Resource" uid="uid://dop3uu2ya1hc5" path="res://资源/test_item.tres" id="2_ppyta"]
+[ext_resource type="Script" uid="uid://befkj4vel31xd" path="res://脚本/Teleporter.gd" id="4_ppyta"]
+[ext_resource type="Resource" uid="uid://bxdd8b8nfrwcn" path="res://资源/test_item_2.tres" id="4_vbegm"]
+[ext_resource type="Resource" uid="uid://ciyqehqn0siqu" path="res://资源/test_item_3.tres" id="5_ehkex"]
+[ext_resource type="Resource" uid="uid://bffhlk45g7n3y" path="res://资源/test_item_4.tres" id="6_xersf"]
+[ext_resource type="Resource" uid="uid://ilesbsa1pb" path="res://资源/test_item_5.tres" id="7_00tp4"]
+[ext_resource type="Resource" uid="uid://cqnwdwt7b3dcg" path="res://资源/test_item_6.tres" id="8_77dp3"]
+[ext_resource type="Resource" uid="uid://dlhgs6cn7ssjo" path="res://资源/test_item_7.tres" id="9_5tkv4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykrsh"]
+radius = 197.385
+
+[node name="test" type="Node2D"]
+
+[node name="scene_item" type="Area2D" parent="."]
+position = Vector2(802, 435)
+script = ExtResource("1_8uh7m")
+item = ExtResource("2_ppyta")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item2" type="Area2D" parent="."]
+position = Vector2(1103, 476)
+script = ExtResource("1_8uh7m")
+item = ExtResource("4_vbegm")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item3" type="Area2D" parent="."]
+position = Vector2(998, 689)
+script = ExtResource("1_8uh7m")
+item = ExtResource("5_ehkex")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item4" type="Area2D" parent="."]
+position = Vector2(1211, 708)
+script = ExtResource("1_8uh7m")
+item = ExtResource("6_xersf")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item5" type="Area2D" parent="."]
+position = Vector2(651, 799)
+script = ExtResource("1_8uh7m")
+item = ExtResource("7_00tp4")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item6" type="Area2D" parent="."]
+position = Vector2(887, 905)
+script = ExtResource("1_8uh7m")
+item = ExtResource("8_77dp3")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="scene_item7" type="Area2D" parent="."]
+position = Vector2(1248, 946)
+script = ExtResource("1_8uh7m")
+item = ExtResource("9_5tkv4")
+texture = ExtResource("2_6uqi0")
+metadata/_custom_type_script = "uid://d3esywjfdc0d5"
+
+[node name="Telepoter" type="Area2D" parent="."]
+script = ExtResource("4_ppyta")
+path = "uid://tnjeith824vp"
+metadata/_custom_type_script = "uid://befkj4vel31xd"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter"]
+position = Vector2(185, 502)
+shape = SubResource("CircleShape2D_ykrsh")

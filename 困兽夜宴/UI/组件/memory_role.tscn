@@ -1,0 +1,134 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp8c45qdhvwts"]
+
+[ext_resource type="Script" uid="uid://yk28xr73emke" path="res://UI/组件/memory_role.gd" id="1_cvjf4"]
+
+[node name="memory_role" type="HBoxContainer"]
+process_mode = 3
+offset_left = -4.0
+offset_right = 252.0
+offset_bottom = 128.0
+theme_override_constants/separation = 0
+script = ExtResource("1_cvjf4")
+
+[node name="guess" type="Button" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+text = "guess"
+
+[node name="text" type="Label" parent="guess"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="real" type="Button" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+text = "real"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="animals" type="GridContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 210.0
+offset_top = 631.0
+offset_right = 1774.0
+offset_bottom = 823.0
+columns = 8
+
+[node name="ani_1" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "1"
+
+[node name="ani_2" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "2"
+
+[node name="ani_3" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "3"
+
+[node name="ani_4" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "4"
+
+[node name="ani_5" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "5"
+
+[node name="ani_6" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "6"
+
+[node name="ani_7" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "7"
+
+[node name="ani_8" type="Button" parent="CanvasLayer/animals"]
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 2
+text = "8"
+
+[node name="spy_board" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/spy_board"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.470076, 0.470076, 0.470076, 1)
+
+[node name="Back" type="Button" parent="CanvasLayer/spy_board"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = 189.0
+offset_right = 194.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "back"
+
+[connection signal="pressed" from="guess" to="." method="_on_guess_pressed"]
+[connection signal="pressed" from="real" to="." method="_on_real_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_1" to="." method="_on_ani_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_2" to="." method="_on_ani_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_3" to="." method="_on_ani_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_4" to="." method="_on_ani_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_5" to="." method="_on_ani_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_6" to="." method="_on_ani_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_7" to="." method="_on_ani_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/animals/ani_8" to="." method="_on_ani_8_pressed"]

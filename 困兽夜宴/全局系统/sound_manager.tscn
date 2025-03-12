@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvumpg54h1j5l"]
+
+[ext_resource type="Script" uid="uid://c1l0gurdcw450" path="res://全局系统/sound_manager.gd" id="1_x7jkk"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_x7jkk")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="SFX"]
+bus = &"SFX"
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"BGM"
