@@ -31,6 +31,7 @@ offset_bottom = 1077.0
 
 [node name="bag_bg" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/margin_left = 35
 theme_override_constants/margin_right = 35
 
@@ -64,6 +65,7 @@ layout_mode = 2
 
 [node name="bag" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_constants/margin_left = 35
 theme_override_constants/margin_right = 35
 
@@ -139,6 +141,17 @@ theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "你好"
 
+[node name="item_name" type="Label" parent="Control"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 1
+offset_left = -192.0
+offset_top = 113.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 24
+text = "11111111"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="page" type="Button" parent="."]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
@@ -146,9 +159,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 81.0
-offset_top = -161.0
+offset_top = -85.0
 offset_right = 113.0
-offset_bottom = -129.0
+offset_bottom = -53.0
 grow_vertical = 0
 text = "○"
 

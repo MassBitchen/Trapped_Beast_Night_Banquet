@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dahrmula055st"]
+
+[ext_resource type="Script" uid="uid://bj0tjk1dx2a7e" path="res://场景/继承/人物/inherit_npc.gd" id="1_4ter3"]
+[ext_resource type="Script" uid="uid://cewjqqopatblx" path="res://脚本/Interactable.gd" id="1_fa8vo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa8vo"]
+size = Vector2(639, 124)
+
+[node name="inherit_npc" type="Node2D"]
+script = ExtResource("1_4ter3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Interactable" type="Area2D" parent="."]
+script = ExtResource("1_fa8vo")
+metadata/_custom_type_script = "uid://cewjqqopatblx"
+
+[node name="dialog" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="dialog"]
+custom_minimum_size = Vector2(640, 128)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -419.0
+offset_top = -324.0
+offset_right = 221.0
+offset_bottom = -196.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(321, 64)
+mouse_filter = 2
+
+[node name="dialogBG" type="ColorRect" parent="dialog/PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="dialog/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Content" type="RichTextLabel" parent="dialog/PanelContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "你好"
+
+[node name="continue_dialog" type="Area2D" parent="dialog"]
+script = ExtResource("1_fa8vo")
+metadata/_custom_type_script = "uid://cewjqqopatblx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialog/continue_dialog"]
+position = Vector2(891.5, 820)
+shape = SubResource("RectangleShape2D_fa8vo")
+
+[connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]
+[connection signal="interacted" from="dialog/continue_dialog" to="." method="_on_continue_dialog_interacted"]

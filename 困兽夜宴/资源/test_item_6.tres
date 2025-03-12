@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_jshec")
-item_name = "test_item_6"
+item_name = "你是谁"
 prop_texture = ExtResource("1_ajqpm")
 scene_texture = ExtResource("1_ajqpm")
-description = "这是一个测试444444444444444的东西"
+description = "这是个哲学问题"
 metadata/_custom_type_script = "uid://cen7guv4xyust"

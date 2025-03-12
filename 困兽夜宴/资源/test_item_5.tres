@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_h1b0k")
-item_name = "test_item_5"
+item_name = "开"
 prop_texture = ExtResource("1_vsmbn")
 scene_texture = ExtResource("1_vsmbn")
-description = "这是一个测试555555555的东西"
+description = "open"
 metadata/_custom_type_script = "uid://cen7guv4xyust"

@@ -1,17 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://tnjeith824vp"]
+[gd_scene load_steps=5 format=3 uid="uid://tnjeith824vp"]
 
+[ext_resource type="Texture2D" uid="uid://cjmb5gmkpf1bd" path="res://icon.svg" id="2_qih2i"]
 [ext_resource type="Script" uid="uid://befkj4vel31xd" path="res://脚本/Teleporter.gd" id="4_2pks0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yerdr"]
-radius = 197.385
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sth5e"]
+size = Vector2(119, 248.25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qih2i"]
+radius = 25.4951
 
 [node name="test" type="Node2D"]
 
-[node name="Telepoter" type="Area2D" parent="."]
+[node name="Telepoter2" type="Area2D" parent="."]
+script = ExtResource("4_2pks0")
+path = "uid://chqn56dvao8tn"
+metadata/_custom_type_script = "uid://befkj4vel31xd"
+
+[node name="Sprite2D" type="Sprite2D" parent="Telepoter2"]
+position = Vector2(859, 547)
+scale = Vector2(1, 2)
+texture = ExtResource("2_qih2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter2"]
+position = Vector2(859, 546)
+shape = SubResource("RectangleShape2D_sth5e")
+
+[node name="Telepoter3" type="Area2D" parent="."]
 script = ExtResource("4_2pks0")
 path = "uid://cwk8risf4rix5"
 metadata/_custom_type_script = "uid://befkj4vel31xd"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter"]
-position = Vector2(185, 502)
-shape = SubResource("CircleShape2D_yerdr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter3"]
+position = Vector2(802, 1045)
+shape = SubResource("CircleShape2D_qih2i")
+
+[node name="Label" type="Label" parent="Telepoter3"]
+offset_left = 826.0
+offset_top = 1040.0
+offset_right = 866.0
+offset_bottom = 1090.0
+rotation = 1.5708
+theme_override_font_sizes/font_size = 36
+text = ">"

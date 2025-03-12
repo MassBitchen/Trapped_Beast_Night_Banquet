@@ -6,6 +6,7 @@ extends Control
 
 @onready var item_texture: TextureRect = $Control/item_texture
 @onready var item_description: RichTextLabel = $Control/item_description
+@onready var item_name: Label = $Control/item_name
 
 @onready var page_button: Button = $page
 
@@ -15,6 +16,7 @@ var now_page :int = 1
 func _ready() -> void:
 	item_texture.texture = null
 	item_description.text = str("")
+	item_name.text = str("")
 	
 	expand.pressed.connect(_on_expand_pressed)
 	close.pressed.connect(_on_close_pressed)
@@ -24,9 +26,14 @@ func _ready() -> void:
 		child.connect("is_pressed", Callable(self,"_on_updata_itemdata"))
 
 func _on_updata_itemdata(item: Item) -> void:
-	print(item.resource_path.get_file())
-	item_texture.texture = item.prop_texture
-	item_description.text = item.description
+	if item:
+		item_texture.texture = item.prop_texture
+		item_description.text = item.description
+		item_name.text = str(item.item_name)
+	else:
+		item_texture.texture = null
+		item_description.text = str("")
+		item_name.text = str("")
 
 func _on_updata_bag() -> void:
 	var i = page

@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://dlhgs6cn7ssjo" path="res://资源/test_item_7.tres" id="9_5tkv4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykrsh"]
-radius = 197.385
+radius = 25.4951
 
 [node name="test" type="Node2D"]
 
@@ -71,5 +71,14 @@ path = "uid://tnjeith824vp"
 metadata/_custom_type_script = "uid://befkj4vel31xd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Telepoter"]
-position = Vector2(185, 502)
+position = Vector2(802, 1045)
 shape = SubResource("CircleShape2D_ykrsh")
+
+[node name="Label" type="Label" parent="Telepoter"]
+offset_left = 826.0
+offset_top = 1040.0
+offset_right = 866.0
+offset_bottom = 1090.0
+rotation = 1.5708
+theme_override_font_sizes/font_size = 36
+text = ">"

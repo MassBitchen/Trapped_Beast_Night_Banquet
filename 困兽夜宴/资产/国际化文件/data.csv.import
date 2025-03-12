@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://7bn8ir0jxxwl"
+
+[deps]
+
+files=["res://资产/国际化文件/data.CH.translation", "res://资产/国际化文件/data.EN.translation"]
+
+source_file="res://资产/国际化文件/data.csv"
+dest_files=["res://资产/国际化文件/data.CH.translation", "res://资产/国际化文件/data.EN.translation"]
+
+[params]
+
+compress=true
+delimiter=0

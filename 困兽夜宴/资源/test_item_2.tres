@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_madt3")
-item_name = "test_item_2"
+item_name = "报纸"
 prop_texture = ExtResource("1_alk14")
 scene_texture = ExtResource("1_alk14")
-description = "这是一个测试222222222222的东西"
+description = "可以看到新闻的报纸"
 metadata/_custom_type_script = "uid://cen7guv4xyust"

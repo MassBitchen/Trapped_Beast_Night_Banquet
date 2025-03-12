@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_x68ai")
-item_name = "test_item_4"
+item_name = "咸蛋超人"
 prop_texture = ExtResource("1_fdvf2")
 scene_texture = ExtResource("1_fdvf2")
-description = "这是一个测试444444444444444的东西"
+description = "咸蛋超人"
 metadata/_custom_type_script = "uid://cen7guv4xyust"
